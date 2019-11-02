@@ -1,0 +1,5 @@
+name: "completion2and3"
+version: "0.1.0"
+usage: "generate autocompletions script that will work for both helm2 and helm3 together"
+description: "generate autocompletions script that will work for both helm2 and helm3 together"
+command: "$HELM_PLUGIN_DIR/complete.sh"
