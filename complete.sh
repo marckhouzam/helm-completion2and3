@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env sh
+#
 # Copyright 2019 Marc Khouzam <marc.khouzam@gmail.com>
 #
 #    Licensed under the Apache License, Version 2.0 (the "License");
