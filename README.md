@@ -1,7 +1,7 @@
 # Helm completion2and3 plugin
 
 This plugin allows shell completion to work for both Helm v2 and Helm v3
-at the same time.  It targets users that need to run both Helm versions while transition from v2 to v3.
+at the same time.  It targets users that need to run both Helm versions while transitioning from v2 to v3.
 
 ## Installation
 
