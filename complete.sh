@@ -39,13 +39,31 @@ helm3=$3
 echo "#######################################################"
 echo "##############  Helm 2 completion script ##############"
 echo "#######################################################"
-$helm2 completion $shell
+
+# Don't call helm2 to generate its completion script right away.
+# Instead, let the it be called when the user sources the final script.
+# This allow for $helm2 to be an alias known to the user's shell.
+echo "
+# Don't use the new source <() form as it does not work with bash v3
+source /dev/stdin <<- EOF
+   \$($helm2 completion $shell)
+EOF
+"
 
 echo
 echo "#######################################################"
 echo "##############  Helm 3 completion script ##############"
 echo "#######################################################"
-$helm3 completion $shell | sed s/helm/helm3/g
+
+# Don't call helm3 to generate its completion script right away.
+# Instead, let the it be called when the user sources the final script.
+# This allow for $helm3 to be an alias known to the user's shell.
+echo "
+# Don't use the new source <() form as it does not work with bash v3
+source /dev/stdin <<- EOF
+   \$($helm3 completion $shell | sed s/helm/helm3/g)
+EOF
+"
 
 echo
 echo "#######################################################"
