@@ -24,8 +24,11 @@ $ helm completion2and3 <bash|zsh> <helm2> <helm3>
 ```
 where `helm2` is the way you use to invoke Helm v2
 and `helm3` is the way you use to invoke Helm v3.
-Both `helm2` and `helm3` must either be found on $PATH or must
-be aliases referring to the correct binaries.
+It must be possible to call `helm2` and `helm3` directly.
+For example they can be specified as absolute or relative paths
+to the helm binaries,
+they could be binary names found on $PATH or they could
+be aliases referring to the helm binaries.
 
 For example if you have binaries such that:
 ```
